@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Player Profile</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Roboto", "sans-serif";
+      margin: 0;
+      padding: 0;
+      height: 850px;
+      width: 640px;
+    }
+    .header {
+      background-color: #000;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      background-color: #000;
+      color: #FFF;
+      padding: 10px 0;
+      border-bottom: 2px solid #FFF;
+    }
+    .stats div {
+      text-align: center;
+    }
+    .stats div p {
+      margin: 5px 0;
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .content {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 20px;
+    }
+    .content img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .content p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .metrics {
+      text-align: center;
+      margin: 20px 0;
+      padding: 10px 0;
+      border-top: 1px solid #ccc;
+    }
+    .metrics .metric-stats {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f8f8f8;
+      padding: 10px;
+    }
+    .metrics .metric-stats div {
+      text-align: center;
+    }
+    .metrics .metric-stats div p {
+      margin: 5px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .metric-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* width: 590px; */
+    }
+    .game-metric {
+      text-align: center;
+      /* align-items: center; */
+      /* justify-content: center; */
+      margin: 20px;
+      width: 590px;
+
+      /* padding: 10px; */
+      /* width: 100%; */
+      border: 1px solid #000;
+      font-size: 18px;
+      font-style: italic;
+      font-weight: bold;
+      /* margin-left: 100px; */
+    }
+    .game-stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .game-stats div p {
+      margin: 5px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .advanced-analytics {
+      margin: 0 25px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      /* padding: 10px 0; */
+    }
+
+    .aa-p-wrapper {
+      background-color: #000;
+      color: white;
+      /* padding: 1px 0;  */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      margin-top: 10px;
+    }
+    .advanced-analytics .analytics-stats {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 10px;
+      background-color: #FFF;
+      color: #000;
+      padding: 10px;
+    }
+    /* .advanced-analytics .analytics-stats div {
+      background-color: #FFDE5A;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    } */
+    
+    .stat {
+      background-color: #FFDE5A;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .footer p {
+      margin: 0;
+    }
+    .data {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .footerLogoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 15px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .logoWrapper {
+    width: 200px;
+    height: 50px;
+  }
+
+  .logo {
+    width: 200px;
+    object-fit: contain;
+    height: 50px;
+  }
+  hr {
+    height: 3px;
+    background-color: black;
+    border: none;
+  }
+
+  .hrWrapper {
+    width: 100%;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <h1>{{playerName}}</h1>
+  </div>
+
+  <div class="stats">
+    <div>
+      <p>Height</p>
+      <p>{{heightWithShoes}}</p>
+    </div>
+    <div>
+      <p>Weight</p>
+      <p>{{weight}}</p>
+    </div>
+    <div>
+      <p>Body Comp</p>
+      <p>{{bodyFat}}</p>
+    </div>
+    <div>
+      <p>Wingspan</p>
+      <p>{{wingSpan}}</p>
+    </div>
+    <div>
+      <p>Standing Reach</p>
+      <p>{{standingReach}}</p>
+    </div>
+    <div>
+      <p>Hand Length/Width</p>
+      <p>{{handLength}}/{{handWidth}}</p>
+    </div>
+  </div>
+
+  <div class="content">
+    <img src="{{standingShot}}" alt="Player Image">
+    <div class="data">
+      <p>{{description}}</p>
+      <div class="metrics">
+        <div class="metric-stats">
+          <div>
+            <p>Max Vert</p>
+            <p>{{maxVert}}</p>
+          </div>
+          <div>
+            <p>Standing Vert</p>
+            <p>{{standingVert}}</p>
+          </div>
+          <div>
+            <p>Lane Agility</p>
+            <p>{{laneAgility}}</p>
+          </div>
+          <div>
+            <p>Shuttle Run</p>
+            <p>{{shuttle}}</p>
+          </div>
+          <div>
+            <p>3/4 Court Sprint</p>
+            <p>{{courtSprint}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+  </div>
+  <div class="metric-wrap">
+    <div class="game-metric">The <em>GAME</em> is the Metric</div>
+  </div>
+  <div class="game-stats">
+    <div>
+      <p>Max Speed</p>
+      <p>{{maxSpeed}}</p>
+    </div>
+    <div>
+      <p>Max Jump Height</p>
+      <p>{{maxJump}}</p>
+    </div>
+    <div>
+      <p>Peak Relative Propulsive Power</p>
+      <p>{{prpp}}</p>
+    </div>
+  </div>
+
+  <div class="advanced-analytics">
+    <div class="aa-p-wrapper">
+      <p>Advanced Analytics - Live Action</p>
+    </div>
+    <div class="analytics-stats">
+      <div>
+        <p>Acceleration</p>
+        <p class="stat">{{acceleration}}</p>
+      </div>
+      <div>
+        <p>Deceleration</p>
+        <p class="stat">{{deceleration}}</p>
+      </div>
+      <div>
+        <p>Time to Take Off</p>
+        <p class="stat">{{ttto}}</p>
+      </div>
+      <div>
+        <p>Braking Phase</p>
+        <p class="stat">{{breakingPhase}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footerLogoWrapper">
+    <div class="hrWrapper">
+      <hr />
+    </div>
+    <div class="logoWrapper">
+      <img src="../assets/images/scoutpro.png" class="logo" />
+    </div>
+    <div class="hrWrapper">
+      <hr />
+    </div>
+  </div>
+
+</html>
