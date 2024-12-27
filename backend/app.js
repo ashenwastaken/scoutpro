@@ -36,7 +36,7 @@ const sessionConfig = {
 };
 
 const corsOptions = {
-  origin: '*',
+  origin: 'http://167.88.43.147:3000/',
   credentials: true,
   methods: "GET,POST,PUT,DELETE",
   allowedHeaders: "Content-Type,Authorization",
