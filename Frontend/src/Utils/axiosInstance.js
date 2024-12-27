@@ -1,7 +1,10 @@
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const axiosInstance = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: process.env.REACT_APP_PUBLIC_URL,
     withCredentials: true,
 });
 
