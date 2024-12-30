@@ -21,7 +21,7 @@ const PORT = process.env.PORT || 5000;
 const mongoURi =
   process.env.MONGODB_URI ;
 
-const secret = "thisisnotagoodsecret";
+const secret = process.env.JWT_SECRET;
 const store = new MongoDBStore({
   mongoUrl: mongoURi,
   secret,
@@ -68,7 +68,7 @@ app.get(
 
 // initializing Mongoose
 mongoose
-  .connect(mongoURi, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(mongoURi)
   .then(() => {
     console.log("Mongoose is connected");
   })

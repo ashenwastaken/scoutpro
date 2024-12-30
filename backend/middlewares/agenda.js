@@ -23,7 +23,8 @@ async function htmlToImage(player) {
             'https://hcti.io/v1/image',
             {
                 html: htmlContent,
-                width: 294
+                viewport_height: 850,
+                viewport_width: 640,
             },
             {
                 headers: {
