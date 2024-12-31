@@ -5,7 +5,7 @@ import copyRight from "../assets/icons/copyright.png";
 export default function PlayerFooter() {
   return (
     <footer className="footer">
-      <div className="max-width mx-auto py-3">
+      <div className="max-width mx-auto">
         <div className="innerContainer">
           <div className="row g-4 justify-content-between align-items-center">
             <div className="col-auto d-flex align-items-center footer-copyright">

@@ -25,6 +25,7 @@ button {
     font-weight: 400;
     transition: all 0.2s ease-in-out;
 }
+
 .heroSection {
     position: relative;
     overflow: hidden;
@@ -96,11 +97,14 @@ button[type="submit"]:hover {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5 {
     color: #A40F37;
+}
+
+h2 {
+    color: #000;
 }
 
 .authInputGroup label {
@@ -858,7 +862,7 @@ td {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 414px;
+    height: 490px;
     margin: 0 auto;
 }
 
@@ -1012,11 +1016,205 @@ td {
 
 .playerProfileSubHeading {
     color: #000;
+    text-align:justify;
+    text-justify: inter-word;
+    font-family: Roboto;
     font-size: 0.8rem;
-    font-weight: 300;
+    font-weight: 350;
     margin-bottom: 32px;
 }
 
+/* ---------------------------------- */
+/* PDF SECTION STYLES                */
+/* ---------------------------------- */
+.pdfSection {
+    position: relative;
+    width: 100%;
+    padding: 0; /* Adjust padding as needed */
+    overflow: hidden; /* So the absolute SVG doesn’t expand the page */
+  }
+  
+  .pdfContent {
+    position: relative;
+    z-index: 1;
+    padding-left: 300px;
+  }
+  
+  /* The column that holds the SVG and PDF image */
+  .pdf-preview-wrapper {
+    position: relative;
+    min-height: 450px; /* So SVG can stretch full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* The absolutely-positioned SVG background */
+  .svg-bg-pdf {
+    position: absolute;
+    top: 0;
+    bottom: -10px;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .svg-bg-pdf svg {
+    height: 100%;
+    width: auto;
+  }
+  
+  /* PDF Image & tooltip container */
+  .pdfImageWrapper {
+    position: relative;
+    z-index: 2; /* On top of the SVG */
+    margin-left: -330px;
+    display: inline-block;
+  }
+  
+  .pdfImage {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Tooltip styling (as you had) */
+  .tooltip-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+  }
+  .infoIcon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  .tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -35px;
+    right: -5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 14px;
+  }
+  .tooltip-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /* ---------------------------------- */
+  /* RESPONSIVENESS FOR PDF SECTION     */
+  /* ---------------------------------- */
+  @media (max-width: 768px) {
+    .pdfSection {
+      padding: 40px 0;
+    }
+    .pdf-preview-wrapper {
+      min-height: 350px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .pdfSection {
+      padding: 30px 0;
+    }
+    .pdf-preview-wrapper {
+      min-height: 250px;
+    }
+  }
+  
+  /* ---------------------------------- */
+/* ABOUT PLAYER SECTION STYLES       */
+/* ---------------------------------- */
+.aboutPlayerSection {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    overflow: hidden; /* So the absolute SVG doesn’t expand the page */
+  }
+  
+  .aboutPlayerContent {
+    position: relative;
+    z-index: 1;
+    /* You can add container constraints here if desired */
+  }
+  
+  /* Wrapper that holds both the SVG and the player image */
+  .aboutPlayerSvgWrapper {
+    position: relative;
+    min-height: 450px; /* Ensure some minimum height so SVG can stretch */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    overflow: hidden;
+  }
+  
+  /* The absolutely-positioned SVG background that stretches top-to-bottom */
+  .svg-bg-about {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1; /* Sits behind the image */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+  }
+  
+  .svg-bg-about svg {
+    height: 100%;
+    width: auto;
+    /* Force the SVG to fill the entire height of the parent */
+  }
+  
+  /* Player image wrapper to fine-tune its placement over the SVG */
+  .aboutPlayerImageWrapper {
+    position: relative;
+    z-index: 2; /* On top of the SVG */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .heroPlayerImage {
+    max-width: 100%;
+    height: auto;
+    /* The image itself scales responsively */
+  }
+  
+  .aboutPlayerTextWrapper {
+    /* Additional spacing or styling as needed */
+  }
+  
+  /* ---------------------------------- */
+  /* RESPONSIVENESS FOR ABOUT PLAYER    */
+  /* ---------------------------------- */
+  @media (max-width: 768px) {
+    .aboutPlayerSection {
+      padding: 40px 0;
+    }
+    .aboutPlayerSvgWrapper {
+      min-height: 350px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .aboutPlayerSection {
+      padding: 30px 0;
+    }
+    .aboutPlayerSvgWrapper {
+      min-height: 250px;
+    }
+  }
 
 .footageContainer {
     background-color: #A40F37;
@@ -1125,11 +1323,11 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 173px;
+    width: 210px;
     height: 39px;
     color: #FFF;
-    font-size: 0.8rem;
-    font-weight: 600;
+    font-size: 0.6rem;
+    font-weight: 700;
 }
 
 .innerContainer {

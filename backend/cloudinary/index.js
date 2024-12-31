@@ -11,7 +11,7 @@ const storage = new CloudinaryStorage({
   cloudinary,
   params: {
     folder: "ScoutPro/Players",
-    allowedFormats: ["jpg", "png", "jpeg"],
+    allowedFormats: ["jpg", "png", "jpeg", "webp"],
     transformation: [{ quality: "auto" }],
   },
 });

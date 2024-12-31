@@ -106,7 +106,7 @@ export default function Player() {
                       alt="Player main display"
                       src={
                         playerImages.length > 0
-                          ? playerImages[0].path
+                          ? playerImages[1].path
                           : dummyPlayerImage
                       }
                       className="heroPlayerImage"
@@ -179,67 +179,71 @@ export default function Player() {
           </div>
         </section>
 
-            <section className="container">
-                <div className="row align-items-center my-5">
-                    <div className="col-12 col-lg-6 mt-0 imgWithSvg">
-                        <svg
-                            width="361"
-                            height="503"
-                            viewBox="0 0 361 503"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                        >
-                            <path
-                                d="M129.477 159.886H194.984L65.5064 503H0L129.477 159.886Z"
-                                fill="#A40F37"
-                                fillOpacity="0.2"
-                            />
-                            <path
-                                d="M290.476 0H360.797L221.804 368.205H151.483L290.476 0Z"
-                                fill="#A40F37"
-                                fillOpacity="0.2"
-                            />
-                            <path
-                                d="M135.666 419.848H209.569L178.095 503H104.448L135.666 419.848Z"
-                                fill="#A40F37"
-                                fillOpacity="0.2"
-                            />
-                        </svg>
-                        <div className="d-flex justify-content-center">
-                            <div className="heroImageWrapper">
-                                <img
-                                    alt="Player mugshot"
-                                    src={
-                                        playerImages.length > 1 && playerImages[1].path
-                                            ? playerImages[1].path
-                                            : dummyPlayerImage
-                                    }
-                                    className="heroPlayerImage"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-lg-6 mt-5 mt-lg-0">
-                        <h2 className="playerProfileText">About PLayer</h2>
-                        <p className="playerProfileSubHeading">
-                            {playerDescription
-                                .split("\n")
-                                .filter((sentence) => sentence.trim() !== "")
-                                .map((sentence, index, array) => (
-                                    <React.Fragment key={index}>
-                                        {sentence.trim()}
-                                        {index < array.length - 1 && (
-                                            <>
-                                                <br />
-                                                <br />
-                                            </>
-                                        )}
-                                    </React.Fragment>
-                                ))}
-                        </p>
-                    </div>
-                </div>
-            </section>
+        <section className="aboutPlayerSection">
+          <div className="row align-items-center aboutPlayerContent">
+            {/* SVG + Image Column */}
+            <div className="col-12 col-lg-6 aboutPlayerSvgWrapper">
+              {/* The absolute-positioned SVG */}
+              <div className="svg-bg-about">
+                <svg
+                  width="361"
+                  height="503"
+                  viewBox="0 0 361 503"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M129.477 159.886H194.984L65.5064 503H0L129.477 159.886Z"
+                    fill="#A40F37"
+                    fillOpacity="0.2"
+                  />
+                  <path
+                    d="M290.476 0H360.797L221.804 368.205H151.483L290.476 0Z"
+                    fill="#A40F37"
+                    fillOpacity="0.2"
+                  />
+                  <path
+                    d="M135.666 419.848H209.569L178.095 503H104.448L135.666 419.848Z"
+                    fill="#A40F37"
+                    fillOpacity="0.2"
+                  />
+                </svg>
+              </div>
+
+              <div className="aboutPlayerImageWrapper">
+                <img
+                  alt="Player mugshot"
+                  src={
+                    playerImages.length > 1 && playerImages[0].path
+                      ? playerImages[0].path
+                      : dummyPlayerImage
+                  }
+                  className="heroPlayerImage"
+                />
+              </div>
+            </div>
+            <div className="col-12 col-lg-6 mt-5 mt-lg-0 aboutPlayerTextWrapper">
+              <h2 className="playerProfileText">About Player</h2>
+              <p className="playerProfileSubHeading">
+                {playerDescription
+                  .split("\n")
+                  .filter((sentence) => sentence.trim() !== "")
+                  .map((sentence, index, array) => (
+                    <React.Fragment key={index}>
+                      {sentence.trim()}
+                      {index < array.length - 1 && (
+                        <>
+                          <br />
+                          <br />
+                        </>
+                      )}
+                    </React.Fragment>
+                  ))}
+              </p>
+            </div>
+          </div>
+        </section>
+
 
             <section className="footageContainer">
                 <div className="container text-center">
@@ -265,63 +269,73 @@ export default function Player() {
                 </div>
             </section>
 
-            <section className="container">
-                <div className="row align-items-center my-5">
-                    <div className="col-12 col-lg-6 mt-0">
-                    <h2>Downloadable PDF</h2>
-                    <p className="playerProfileSubHeading">
-                        For a comprehensive review, coaches and scouts can download the athlete's detailed profile in PDF format. This downloadable player card includes basic information, key statistics, and any embedded commentary or notes, serving as a valuable resource for evaluations. <br /><br />
-                        The PDF offers a quick yet thorough snapshot of the athlete's strengths and achievements, curated for effective evaluation. Note that the content is non-editable once downloaded, ensuring a consistent, professional document for internal or scouting purposes.
-                    </p>
-                    <button
-                        onClick={() => requestPdf(player._id)}
-                        className="downloadPdfBtnRed"
-                        type="button"
-                        disabled={isLoading}
+            <section className="pdfSection">
+              <div className="row align-items-center pdfContent">
+                <div className="col-12 col-lg-5" style={{ fontFamily: "Sansation" , color: "#FFFFFF"}}>
+                  <h2>Downloadable PDF</h2>
+                  <p className="playerProfileSubHeading">
+                    For a comprehensive review, coaches and scouts can download the
+                    athlete's detailed profile in PDF format. This downloadable player
+                    card includes basic information, key statistics, and any embedded
+                    commentary or notes, serving as a valuable resource for evaluations.
+                    <br />
+                    <br />
+                    The PDF offers a quick yet thorough snapshot of the athlete's
+                    strengths and achievements, curated for effective evaluation. Note
+                    that the content is non-editable once downloaded, ensuring a
+                    consistent, professional document for internal or scouting purposes.
+                  </p>
+                  <button
+                    onClick={() => requestPdf(player._id)}
+                    className="downloadPdfBtnRed"
+                    type="button"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Generating PDF..." : "Download Customised PDF"}
+                  </button>
+                </div>
+
+                <div className="col-12 col-lg-6 pdf-preview-wrapper">
+                  <div className="svg-bg-pdf">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 369 514"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      preserveAspectRatio="xMaxYMax meet"
                     >
-                        {isLoading ? "Generating PDF..." : "Download PDF"}
-                    </button>
+                      <path
+                        d="M132.622 163.383H199.561L67.2524 514H0.313477L132.622 163.383Z"
+                        fill="#A40F37"
+                        fillOpacity="0.2"
+                      />
+                      <path
+                        d="M297.142 0H369L226.968 376.258H155.109L297.142 0Z"
+                        fill="#A40F37"
+                        fillOpacity="0.2"
+                      />
+                      <path
+                        d="M139.005 428.689H214.938L182.384 514H106.451L139.005 428.689Z"
+                        fill="#A40F37"
+                        fillOpacity="0.2"
+                      />
+                    </svg>
+                  </div>
+                  <div className="pdfImageWrapper">
+                    <img src={pdfImage} alt="PDF Display" className="pdfImage" />
+                    <div className="tooltip-wrapper">
+                      <img src={infoIcon} alt="Info Icon" className="infoIcon" />
+                      <div className="tooltip">
+                        This is a sample PDF. Personalized reports will be generated when
+                        downloaded.
+                      </div>
                     </div>
-                    <div className="col-12 col-lg-6 mt-5 mt-lg-0 pdf-preview-container">
-                        <div className="svg-background">
-                            <svg
-                            width="100%"
-                            height="100%"
-                            viewBox="0 0 369 514"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                            preserveAspectRatio="xMaxYMax meet"
-                            >
-                            {/* SVG Paths */}
-                            <path
-                                d="M132.622 163.383H199.561L67.2524 514H0.313477L132.622 163.383Z"
-                                fill="#A40F37"
-                                fillOpacity="0.2"
-                            />
-                            <path
-                                d="M297.142 0H369L226.968 376.258H155.109L297.142 0Z"
-                                fill="#A40F37"
-                                fillOpacity="0.2"
-                            />
-                            <path
-                                d="M139.005 428.689H214.938L182.384 514H106.451L139.005 428.689Z"
-                                fill="#A40F37"
-                                fillOpacity="0.2"
-                            />
-                            </svg>  
-          </div>
-          <div className="pdf-image-wrapper">
-            <img src={pdfImage} alt="PDF Display" className="pdfImage" />
-            <div className="tooltip-wrapper">
-              <img src={infoIcon} alt="Info Icon" className="infoIcon" /> {/* Now a PNG */}
-              <div className="tooltip">
-                This is a sample PDF. Personalized reports will be generated when downloaded.
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            </section>
+
 
             <PlayerFooter />
         </>
