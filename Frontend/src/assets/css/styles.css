@@ -33,11 +33,11 @@ button {
 
 .heroSection::before {
     content: "";
-    background-image: url(../images/heroback.png);
+    background-image: url(../images/heroback.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: blur(5px) brightness(0.5); /* Increased blur and darkened */
+    filter: blur(5px) brightness(0.5); 
     position: absolute;
     top: 0;
     left: 0;
@@ -159,7 +159,7 @@ h2 {
 }
 
 .backgroundImage {
-    background-image: url(../images/background.jpeg);
+    background-image: url(../images/background.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -246,7 +246,7 @@ h2 {
 
 
 .authImage {
-    background-image: url(../images/loginImage.jpeg);
+    background-image: url(../images/loginImage.webp);
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,7 +257,7 @@ h2 {
 }
 
 .authImageSignup {
-    background-image: url(../images/signupImage.jpeg);
+    background-image: url(../images/signupImage.webp);
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -321,7 +321,7 @@ h2 {
 
 
 .dashBoardBackground {
-    background-image: url(../images/dashback.png);
+    background-image: url(../images/dashback.webp);
     background-repeat: no-repeat;
     padding-top: 85px;
     min-height: 100vh;
@@ -789,7 +789,7 @@ td {
 
 .heroSection::before {
     content: "";
-    background-image: url(../images/heroback.png);
+    background-image: url(../images/heroback.webp);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import dummyPlayerImage from "../assets/images/dummy.jpeg";
-import nothingFoundImage from "../assets/images/emptyBox.png";
+import nothingFoundImage from "../assets/images/emptyBox.webp";
 import { Link } from "react-router-dom";
 import axiosInstance from "../services/axiosInstance";
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle.min";

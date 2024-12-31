@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import PlayerNav from "./PlayerNav";
 import PlayerFooter from "./PlayerFooter";
-import dummyPlayerImage from "../assets/images/player.png";
+import dummyPlayerImage from "../assets/images/player.webp";
 import pdfImage from "../assets/images/pdfPreview.svg";
 import infoIcon from "../assets/icons/info.png";
 import axiosInstance from "../services/axiosInstance";
