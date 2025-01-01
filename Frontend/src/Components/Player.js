@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import PlayerNav from "./PlayerNav";
 import PlayerFooter from "./PlayerFooter";
 import dummyPlayerImage from "../assets/images/player.webp";
-import pdfImage from "../assets/images/pdfPreview.svg";
+import pdfImage from "../assets/images/pdfPreview.webp";
 import infoIcon from "../assets/icons/info.png";
 import axiosInstance from "../services/axiosInstance";
 import Loading from "./Loading";
@@ -150,7 +150,7 @@ export default function Player() {
                       {player.handLength || "N/A"}
                     </span>
                   </div>
-  
+
                   <div className="stat row2">
                     <span className="stat-label">Lane Agility</span>
                     <span className="stat-value">
