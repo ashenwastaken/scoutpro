@@ -109,7 +109,7 @@ export default function Player() {
                           ? playerImages[1].path
                           : dummyPlayerImage
                       }
-                      className="heroPlayerImage"
+                      className="heroPlayerImage1"
                     />
                   </div>
                 </div>
