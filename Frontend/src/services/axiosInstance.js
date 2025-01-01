@@ -2,7 +2,7 @@ import axios from "axios";
 import authService from "./authService";
 
 const axiosInstance = axios.create({
-  baseURL: "http://localhost:5000/api/v1",
+  baseURL: process.env.REACT_APP_PUBLIC_URL,
   headers: {
     "Content-Type": "application/json",
   },
