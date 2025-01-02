@@ -37,7 +37,7 @@ button {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: blur(5px) brightness(0.5); 
+    filter: blur(5px) brightness(0.5);
     position: absolute;
     top: 0;
     left: 0;
@@ -445,7 +445,7 @@ h2 {
 
 .btn-close svg {
     pointer-events: none;
-  }
+}
 
 .modalTitle {
     text-align: center;
@@ -475,7 +475,7 @@ h2 {
 .dragDropContainer.active {
     background-color: rgba(164, 15, 55, 0.1);
     border-color: #a40f37;
-  }
+}
 
 .dragDropText {
     margin: 10px 0;
@@ -499,11 +499,11 @@ h2 {
 
 .uploadExcelBtn:hover {
     background-color: #cc103f;
-  }
+}
 
-  input[type="file"] {
+input[type="file"] {
     display: none;
-  }
+}
 
 .inputBlock {
     margin-bottom: 32px;
@@ -892,9 +892,9 @@ td {
 
 .allStatsWrapper {
     width: 100%;
-  }
-  
-  .stats-container {
+}
+
+.stats-container {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-auto-rows: auto;
@@ -902,9 +902,9 @@ td {
     width: 100%;
     margin: 10px 0 0;
     justify-items: start;
-  }
-  
-  .stat {
+}
+
+.stat {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -915,72 +915,78 @@ td {
     justify-content: center;
     min-height: 50px;
     width: 100%;
-  }
-  
-  .stat:first-child {
+}
+
+.stat:first-child {
     border-left: 3px solid #A40F37;
-  }
-  
-  .stat-label {
+}
+
+.stat-label {
     font-weight: 700; /* Bold font weight for labels */
     margin-bottom: 5px;
     font-size: 0.8rem;
     color: #fff;
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
-  }
-  
-  .stat-value {
+}
+
+.stat-value {
     font-size: 1rem;
     color: #fff;
     font-weight: 400; /* Lighter font weight for values */
     font-family: "Roboto", sans-serif;
-  }
-  
-  .row2 {
-      margin-top: 20px;
-  }
-  
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
+}
+
+.row2 {
+    margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
     .customHeroTextandImage {
-      padding: 0 20px;
+        padding: 0 20px;
     }
     .stats-container {
-      grid-template-columns: repeat(2, 1fr);
-      padding-left: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 20px;
     }
     .stat {
-      border-left: 3px solid #A40F37;
-      border-bottom: 3px solid #A40F37;
+        border-left: 3px solid #A40F37;
+        border-bottom: 3px solid #A40F37;
     }
     .stat:last-child {
-      border-bottom: 3px solid #A40F37;
+        border-bottom: 3px solid #A40F37;
     }
-  }
-  
-  .w-auto {
+    .pdfContent {
+        padding-left: 20px;
+    }
+    .pdf-preview-wrapper {
+        margin-top: 50px;
+    }
+}
+
+.w-auto {
     width: auto !important;
-  }
-  
-  .playerStatsHeading {
+}
+
+.playerStatsHeading {
     color: #fff;
     font-size: 0.8rem;
     font-weight: 600;
     margin: 0;
-  }
-  
-  .playerStats {
+}
+
+.playerStats {
     color: #fff;
     font-size: 1.2rem;
     font-weight: 300;
     margin: 0;
-  }
-  
-  .statsWrapper > .playerStatsHeading,
-  .statsWrapper > .playerStats {
+}
+
+.statsWrapper > .playerStatsHeading,
+.statsWrapper > .playerStats {
     text-align: left !important;
-  }
+}
 
 .imgWithSvg {
     position: relative;
@@ -1042,26 +1048,26 @@ td {
     width: 100%;
     padding: 0; /* Adjust padding as needed */
     overflow: hidden; /* So the absolute SVG doesn’t expand the page */
-  }
-  
-  .pdfContent {
+}
+
+.pdfContent {
     position: relative;
     z-index: 1;
     padding-left: 300px;
-  }
-  
-  /* The column that holds the SVG and PDF image */
-  .pdf-preview-wrapper {
+}
+
+/* The column that holds the SVG and PDF image */
+.pdf-preview-wrapper {
     position: relative;
     min-height: 450px; /* So SVG can stretch full height */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-  }
-  
-  /* The absolutely-positioned SVG background */
-  .svg-bg-pdf {
+}
+
+/* The absolutely-positioned SVG background */
+.svg-bg-pdf {
     position: absolute;
     top: 0;
     bottom: -10px;
@@ -1070,40 +1076,40 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .svg-bg-pdf svg {
+}
+
+.svg-bg-pdf svg {
     height: 100%;
     width: auto;
-  }
-  
-  /* PDF Image & tooltip container */
-  .pdfImageWrapper {
+}
+
+/* PDF Image & tooltip container */
+.pdfImageWrapper {
     position: relative;
     overflow:visible;
     z-index: 2; /* On top of the SVG */
     margin-left: -330px;
     display: inline-block;
-  }
-  
-  .pdfImage {
+}
+
+.pdfImage {
     max-width: 100%;
     height: auto;
-  }
-  
-  /* Tooltip styling (as you had) */
-  .tooltip-wrapper {
+}
+
+/* Tooltip styling (as you had) */
+.tooltip-wrapper {
     position: absolute;
     top: 10px;
     right: 10px;
     display: inline-block;
-  }
-  .infoIcon {
+}
+.infoIcon {
     width: 20px;
     height: 20px;
     cursor: pointer;
-  }
-  .tooltip {
+}
+.tooltip {
     visibility: hidden;
     position: absolute;
     top: -35px;
@@ -1117,60 +1123,67 @@ td {
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
     font-size: 14px;
-  }
-  .tooltip-wrapper:hover .tooltip {
+}
+.tooltip-wrapper:hover .tooltip {
     visibility: visible;
     opacity: 1;
-  }
-  
-  /* ---------------------------------- */
-  /* RESPONSIVENESS FOR PDF SECTION     */
-  /* ---------------------------------- */
-  @media (max-width: 768px) {
+}
+
+/* ---------------------------------- */
+/* RESPONSIVENESS FOR PDF SECTION     */
+/* ---------------------------------- */
+@media (max-width: 768px) {
     .pdfSection {
-      padding: 40px 0;
+        padding: 40px 0;
     }
     .pdf-preview-wrapper {
-      min-height: 350px;
+        min-height: 350px;
     }
-  }
-  
-  @media (max-width: 576px) {
-    .pdfSection {
-      padding: 30px 0;
+
+    .pdfContent {
+        padding-left: 20px;
     }
     .pdf-preview-wrapper {
-      min-height: 250px;
+        margin-top: 50px;
     }
-  }
-  
-  /* ---------------------------------- */
+}
+
+@media (max-width: 576px) {
+    .pdfSection {
+        padding: 30px 0;
+    }
+    .pdf-preview-wrapper {
+        min-height: 250px;
+    }
+}
+
+/* ---------------------------------- */
 /* ABOUT PLAYER SECTION STYLES       */
 /* ---------------------------------- */
 .aboutPlayerSection {
     position: relative;
     width: 100%; /* Adjust as needed */
     overflow: hidden; /* So the absolute SVG doesn’t expand the page */
-  }
-  
-  .aboutPlayerContent {
+}
+
+.aboutPlayerContent {
     position: relative;
     z-index: 1;
     /* You can add container constraints here if desired */
-  }
-  
-  /* Wrapper that holds both the SVG and the player image */
-  .aboutPlayerSvgWrapper {
+}
+
+/* Wrapper that holds both the SVG and the player image */
+.aboutPlayerSvgWrapper {
     position: relative;
     min-height: 450px; /* Ensure some minimum height so SVG can stretch */
     display: flex;
     justify-content: left;
     align-items: left;
     overflow: hidden;
-  }
-  
-  /* The absolutely-positioned SVG background that stretches top-to-bottom */
-  .svg-bg-about {
+}
+
+/* The absolutely-positioned SVG background that stretches top-to-bottom */
+.svg-bg-about {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1179,44 +1192,44 @@ td {
     display: flex;
     justify-content: left;
     align-items: left;
-  }
-  
-  .svg-bg-about svg {
+}
+
+.svg-bg-about svg {
     height: 100%;
     width: auto;
     /* Force the SVG to fill the entire height of the parent */
-  }
-  
-  /* Player image wrapper to fine-tune its placement over the SVG */
-  .aboutPlayerImageWrapper {
+}
+
+/* Player image wrapper to fine-tune its placement over the SVG */
+.aboutPlayerImageWrapper {
     position: relative;
     z-index: 2; /* On top of the SVG */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
- 
-  /* ---------------------------------- */
-  /* RESPONSIVENESS FOR ABOUT PLAYER    */
-  /* ---------------------------------- */
-  @media (max-width: 768px) {
+}
+
+
+/* ---------------------------------- */
+/* RESPONSIVENESS FOR ABOUT PLAYER    */
+/* ---------------------------------- */
+@media (max-width: 768px) {
     .aboutPlayerSection {
-      padding: 40px 0;
+        padding: 40px 0;
     }
     .aboutPlayerSvgWrapper {
-      min-height: 350px;
+        min-height: 350px;
     }
-  }
-  
-  @media (max-width: 576px) {
+}
+
+@media (max-width: 576px) {
     .aboutPlayerSection {
-      padding: 30px 0;
+        padding: 30px 0;
     }
     .aboutPlayerSvgWrapper {
-      min-height: 250px;
+        min-height: 250px;
     }
-  }
+}
 
 .footageContainer {
     background-color: #A40F37;
@@ -1411,6 +1424,10 @@ td {
     .pdfImage {
         margin-left: 170px;
     }
+    .pdfContent {
+        padding-left: 20px;
+    }
+
 
 }
 
@@ -1523,6 +1540,7 @@ td {
         width: 468px;
         margin-left: 150px;
         padding-bottom: 40px;
+        margin-top: 35px;
     }
 
     .statsWrapper {
@@ -1533,6 +1551,12 @@ td {
         width: 460px;
     }
 
+    .aboutPlayerSection {
+        padding: 30px 0;
+    }
+    .aboutPlayerSvgWrapper {
+        min-height: 250px;
+    }
 
 }
 
@@ -1541,5 +1565,3 @@ td {
         width: 987px;
     }
 }
-
-@media(min-width: 1400px) {}
