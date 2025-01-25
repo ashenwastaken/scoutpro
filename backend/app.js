@@ -36,10 +36,10 @@ const sessionConfig = {
 };
 
 const corsOptions = {
-  origin: '*',
+  origin: 'https://scoutpro.net',
   credentials: true,
-  methods: "GET,POST,PUT,DELETE",
-  allowedHeaders: "Content-Type,Authorization",
+  methods: ['GET','POST','PUT','DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization'],
 };
 
 // Using the app
@@ -49,8 +49,8 @@ app.use(express.static(__dirname + "/templates"));
 app.use(express.static(__dirname + "/public"));
 app.use("/scripts", express.static(path.join(__dirname, "node_modules")));
 app.use(methodOverride("_method"));
-app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.json({limit: "50mb"}));
+app.use(express.urlencoded({ limit: "50mb", extended: true }));
 app.use(session(sessionConfig));
 
 // Route handler
