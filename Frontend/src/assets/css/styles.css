@@ -1,0 +1,1614 @@
+
+@font-face {
+    font-family: "Sansation";
+    src: url(../fonts/Sansation_Regular.ttf);
+}
+
+
+body {
+    font-family: "Poppins", "DM Sans", sans-serif;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 20px;
+}
+
+button {
+    background: #A40F37;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 16px 0px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    transition: all 0.2s ease-in-out;
+}
+
+.heroSection {
+    position: relative;
+    overflow: hidden;
+}
+
+.heroSection::before {
+    content: "";
+    background-image: url(../images/heroback.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(5px) brightness(0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.heroBackground {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.85) 0%, rgba(164, 15, 55, 0.85) 100%); /* Darker gradient */
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 77px;
+    padding: 188px 0px 62px 0px;
+}
+
+.heroPlayerName {
+    color: #FFF;
+    font-size: 3rem; /* Smaller font size */
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    border-bottom: 3px solid #A40F37;
+    margin-bottom: 10px;
+}
+
+.heroPlayerName::after {
+    content: attr(data-text);
+    color: rgba(255, 255, 255, 0.20);
+    font-size: 3rem; /* Matching shadow size */
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    opacity: 0.7;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+button[type="button"]:hover {
+    transform: scale(1.03);
+}
+
+button[type="submit"]:hover {
+    background: #a1052f;
+    transform: scale(1.03);
+}
+
+h1,
+h3,
+h4,
+h5 {
+    color: #A40F37;
+}
+
+h2 {
+    color: #000;
+}
+
+.authInputGroup label {
+    color: #00000054;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.authInputGroup input {
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    border-radius: 12px;
+    border: 1px solid #00000054;
+    font-size: 0.8rem;
+    color: #00000054;
+}
+
+.inputBlock input {
+    width: 100%;
+    padding: 16px 0 16px 16px;
+    border-radius: 12px;
+    border: 1px solid #00000054;
+    font-size: 0.7rem;
+    color: #00000054;
+}
+
+.inputBlock textarea {
+    width: 100%;
+    padding: 15px 18px;
+    border-radius: 12px;
+    border: 1px solid #00000054;
+    font-size: 0.7rem;
+    color: #00000054;
+    height: 100px;
+}
+
+.authInputGroup input::placeholder {
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #00000054;
+}
+
+.authInputGroup input:focus {
+    outline: none;
+}
+
+.max-width {
+    max-width: 1440px;
+    position: relative;
+}
+
+.backgroundImage {
+    background-image: url(../images/background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+
+.logoImage {
+    position: absolute;
+    top: 66px;
+    z-index: 2;
+}
+
+.logoImage img {
+    width: 200px;
+}
+
+
+.backgroundContainer {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.backgroundContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFFCC;
+    z-index: 1;
+    backdrop-filter: blur(8px)
+}
+
+.mainHeading {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: center;
+}
+
+.subHeading {
+    position: relative;
+    z-index: 2;
+    font-family: "Sansation";
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 13px 0px;
+    text-align: center;
+}
+
+.subHeadingLight {
+    position: relative;
+    z-index: 2;
+    font-size: 0.7rem;
+    font-weight: 400;
+    color: #444444;
+    text-align: center;
+}
+
+.getStarted {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin-top: 55px;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 20px;
+    height: 48px;
+}
+
+
+.authImage {
+    background-image: url(../images/loginImage.webp);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    min-height: 146px;
+}
+
+.authImageSignup {
+    background-image: url(../images/signupImage.webp);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    min-height: 146px;
+}
+
+.authContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    border-top-left-radius: 48px;
+    border-bottom-left-radius: 48px;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+}
+
+.authHeading {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.authSubHeading {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.authSubHeadingSignup {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+
+.forgotPasswordContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 13px 0px 44px 0px;
+}
+
+.forgotPasswordText {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #A40F37;
+}
+
+.redirectButton {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.redirectButton a {
+    color: #A40F37;
+}
+
+
+.dashBoardBackground {
+    background-image: url(../images/dashback.webp);
+    background-repeat: no-repeat;
+    padding-top: 85px;
+    min-height: 100vh;
+    height: auto;
+    background-size: cover;
+    position: relative;
+}
+
+.dashBoardBackground::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFFE5;
+    z-index: 0;
+    min-height: 100vh;
+    height: auto;
+}
+
+.logoutBtn {
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.logoutBtn a {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.container {
+    position: relative;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.playersTitleContainer {
+    margin-top: 80px;
+}
+
+.buttonHolder {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+
+.playersTitle {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+}
+
+.playersSubHeading {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.uploadExcelButton {
+    border: 1px solid #A40F37;
+    color: #A40F37;
+    background-color: transparent;
+    padding: 12px 15.5px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.addPlayerButton {
+    padding: 12px 15.5px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.modal-header {
+    display: block;
+    border-bottom: none;
+    position: relative;
+}
+
+.btn-close1 {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 2px solid #A40F37;
+    border-radius: 50%;
+    fill: #A40F37;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-close1:hover {
+    background-color: rgba(164, 15, 55, 0.1);
+    transform: scale(1.1);
+}
+
+.btn-close1:active {
+    background-color: rgba(164, 15, 55, 0.2);
+    transform: scale(0.95);
+}
+
+.btn-close svg {
+    pointer-events: none;
+}
+
+.modalTitle {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.modal-content {
+    border-radius: 24px;
+    padding: 30px 50px;
+}
+
+
+.dragDropContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #a40f37;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dragDropContainer.active {
+    background-color: rgba(164, 15, 55, 0.1);
+    border-color: #a40f37;
+}
+
+.dragDropText {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #a40f37;
+    font-weight: 500;
+    line-height: 27px;
+    text-align: center;
+}
+
+.uploadExcelBtn {
+    color: white;
+    background-color: #a40f37;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+
+.uploadExcelBtn:hover {
+    background-color: #cc103f;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.inputBlock {
+    margin-bottom: 32px;
+}
+
+.inputBlockHeading {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 21.09px;
+    text-align: left;
+}
+
+.imageUploadField {
+    border: 1px solid #A40F37;
+    padding: 15px 18px;
+    border-radius: 12px;
+    font-size: 0.6rem;
+    font-weight: 600;
+    color: #A40F37;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.textAreWrapper {
+    position: relative;
+}
+
+.word-count {
+    position: absolute;
+    right: 20px;
+    bottom: 15px;
+    font-size: 0.6rem;
+    font-weight: 300;
+}
+
+.cancelButton {
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #A40F37;
+    background-color: transparent;
+    border: 1px solid #A40F37;
+    border-radius: 12px;
+}
+
+.submitButton {
+    width: 100%;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.playerContainer {
+    background-color: white;
+    border-radius: 20px;
+    overflow-y: auto;
+    max-height: 50vh;
+    box-shadow: 0px 2px 50px 0px #0000001A;
+}
+
+.playerRow {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.index {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.playerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playerImage {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    object-position: center;
+    object-fit: cover;
+    margin: 0px 16px;
+}
+
+.playerDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playerDetails .playerName {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.editPlayerInfoButton {
+    font-size: 0.6rem;
+    font-weight: 300;
+    padding: 0;
+    background-color: transparent;
+    color: #A40F37;
+}
+
+.playerButtonContainer {
+    display: flex;
+    gap: 12px;
+}
+
+.exportButton {
+    border-radius: 8px;
+    border: 1px solid #A40F37;
+    padding: 12px 13px;
+    background-color: transparent;
+    color: #A40F37;
+    font-size: 0.6rem;
+    font-weight: 500;
+}
+
+.playerButton {
+    padding: 12px 13px;
+    border-radius: 8px;
+    font-size: 0.6rem;
+}
+
+
+.emptyContainer {
+    height: 60vh;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 50px 0px #0000001A;
+}
+
+.emptyBox {
+    width: 260px;
+    height: 215px;
+}
+
+.emptyText {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 16px;
+    text-align: center;
+}
+
+.emptySubHeading {
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+}
+
+.svg-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.popover-content {
+    visibility: hidden;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 32px;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: -94px;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    box-shadow: 0px 4px 200px 0px #00000040;
+    font-size: 0.8rem;
+    font-weight: 300;
+    width: 370px;
+}
+
+.popover-content::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    margin-left: -16px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent transparent #FFFFFF transparent;
+}
+
+.popoverText {
+    text-align: center;
+}
+
+.sampleDownloadButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sampleDownload {
+    width: 200px;
+}
+
+.svg-wrapper:hover .popover-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+th {
+    font-size: 0.55rem;
+    text-align: center;
+    border: 1px solid black;
+    padding: 0px 3px;
+}
+
+td {
+    font-size: 0.4rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.collapse .playerName {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+
+.playerNavButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.downloadPdfBtn {
+    padding: 10px;
+    color: black;
+    background-color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 152px;
+    border-radius: 10px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shareLink {
+    padding: 10px;
+    color: #FFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+    width: 152px;
+    background-color: transparent;
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.heroSection {
+    position: relative;
+    overflow: hidden;
+}
+
+.heroSection::before {
+    content: "";
+    background-image: url(../images/heroback.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(3px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.heroBackground {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.70) 0%, rgba(164, 15, 55, 0.70) 100%);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 77px;
+    padding: 188px 0px 62px 0px;
+}
+
+.heroPlayerName {
+    color: #FFF;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    border-bottom: 3px solid #A40F37;
+    margin-bottom: 10px;
+}
+
+.heroPlayerName::after {
+    content: attr(data-text);
+    color: rgba(255, 255, 255, 0.20);
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    opacity: 0.7;
+    /* white-space: nowrap; */
+}
+
+.heroPlayerWrapper {
+    margin-top: 32px;
+}
+
+.infoHeading {
+    color: #E77728;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.infoText {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.heroImageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.navbar-brand {
+    width: 316px;
+}
+
+.heroPlayerImage {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.heroPlayerImage1 {
+    width: 400px;
+    height: 640px;
+    object-fit: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 105px;
+}
+
+
+.allStatsWrapper {
+    width: 100%;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: auto;
+    gap: 15px 0;
+    width: 100%;
+    margin: 10px 0 0;
+    justify-items: start;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 10px;
+    border-left: 3px solid #A40F37;
+    box-sizing: border-box;
+    justify-content: center;
+    min-height: 50px;
+    width: 100%;
+}
+
+.stat:first-child {
+    border-left: 3px solid #A40F37;
+}
+
+.stat-label {
+    font-weight: 700; /* Bold font weight for labels */
+    margin-bottom: 5px;
+    font-size: 0.8rem;
+    color: #fff;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+}
+
+.stat-value {
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400; /* Lighter font weight for values */
+    font-family: "Roboto", sans-serif;
+}
+
+.row2 {
+    margin-top: 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .customHeroTextandImage {
+        padding: 0 20px;
+    }
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 20px;
+    }
+    .stat {
+        border-left: 3px solid #A40F37;
+        border-bottom: 3px solid #A40F37;
+    }
+    .stat:last-child {
+        border-bottom: 3px solid #A40F37;
+    }
+    .pdfContent {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .pdf-preview-wrapper {
+        margin-top: 50px;
+    }
+}
+
+.w-auto {
+    width: auto !important;
+}
+
+.playerStatsHeading {
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.playerStats {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.statsWrapper > .playerStatsHeading,
+.statsWrapper > .playerStats {
+    text-align: left !important;
+}
+
+.imgWithSvg {
+    position: relative;
+    overflow-y: hidden;
+}
+
+.imgWithSvgReverse {
+    position: relative;
+}
+
+.imgWithSvgReverse svg {
+    position: absolute;
+    z-index: 0;
+    top: -19%;
+    right: 78px;
+}
+
+.imgWithSvgReverse img {
+    position: relative;
+    z-index: 1;
+}
+
+.imgWithSvg svg {
+    position: absolute;
+    z-index: 0;
+    top: -12%;
+    left: 0;
+}
+
+.imgWithSvg img {
+    position: relative;
+}
+
+
+
+.playerProfileText {
+    color: #000;
+    font-family: "Sansation";
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.playerProfileSubHeading {
+    color: #000;
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: Roboto;
+    font-size: 0.8rem;
+    font-weight: 350;
+    margin-bottom: 32px;
+}
+
+.aboutPlayerTextWrapper {
+    padding-right: 185px;
+}
+
+/* ---------------------------------- */
+/* PDF SECTION STYLES                */
+/* ---------------------------------- */
+.pdfSection {
+    position: relative;
+    width: 100%;
+    padding: 0; /* Adjust padding as needed */
+    overflow: hidden; /* So the absolute SVG doesn’t expand the page */
+}
+
+.pdfContent {
+    position: relative;
+    z-index: 1;
+    padding-left: 300px;
+}
+
+/* The column that holds the SVG and PDF image */
+.pdf-preview-wrapper {
+    position: relative;
+    min-height: 450px; /* So SVG can stretch full height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* The absolutely-positioned SVG background */
+.svg-bg-pdf {
+    position: absolute;
+    top: 0;
+    bottom: -10px;
+    width: 100%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg-bg-pdf svg {
+    height: 100%;
+    width: auto;
+}
+
+/* PDF Image & tooltip container */
+.pdfImageWrapper {
+    position: relative;
+    overflow:visible;
+    z-index: 2; /* On top of the SVG */
+    margin-left: -330px;
+    display: inline-block;
+}
+
+/*.pdfImage {*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+
+/*}*/
+
+.overlayWrap {
+    position: relative;
+    display: inline-block;
+    margin-left: 310px;
+}
+
+.pdfImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlayWrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+}
+
+
+
+
+/* Tooltip styling (as you had) */
+.tooltip-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+}
+.infoIcon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -35px;
+    right: -5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 14px;
+}
+.tooltip-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ---------------------------------- */
+/* RESPONSIVENESS FOR PDF SECTION     */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    .pdfSection {
+        padding: 40px 0;
+    }
+    .pdf-preview-wrapper {
+        min-height: 350px;
+    }
+
+    .pdfContent {
+        padding-left: 20px;
+    }
+    .pdf-preview-wrapper {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .pdfSection {
+        padding: 30px 0;
+    }
+    .pdf-preview-wrapper {
+        min-height: 250px;
+    }
+}
+
+/* ---------------------------------- */
+/* ABOUT PLAYER SECTION STYLES       */
+/* ---------------------------------- */
+.aboutPlayerSection {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    padding-right: 50px;
+    overflow: hidden; /* So the absolute SVG doesn’t expand the page */
+}
+
+.aboutPlayerContent {
+    position: relative;
+    z-index: 1;
+    padding: 0 30px;
+    /* You can add container constraints here if desired */
+}
+
+/* Wrapper that holds both the SVG and the player image */
+.aboutPlayerSvgWrapper {
+    position: relative;
+    min-height: 450px; /* Ensure some minimum height so SVG can stretch */
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    padding-right: 0;
+}
+
+/* The absolutely-positioned SVG background that stretches top-to-bottom */
+.svg-bg-about {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1; /* Sits behind the image */
+    /*display: flex;*/
+    /*justify-content: left;*/
+    /*align-items: flex-end;*/
+    left: 0;
+}
+
+.svg-bg-about svg {
+    height: 100%;
+    width: auto;
+    /* Force the SVG to fill the entire height of the parent */
+}
+
+/* Player image wrapper to fine-tune its placement over the SVG */
+.aboutPlayerImageWrapper {
+    position: relative;
+    z-index: 2; /* On top of the SVG */
+    display: flex;
+    width: 468px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---------------------------------- */
+/* RESPONSIVENESS FOR ABOUT PLAYER    */
+/* ---------------------------------- */
+@media (max-width: 768px) {
+    .aboutPlayerSection {
+        padding: 40px 0;
+    }
+    .aboutPlayerSvgWrapper {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .aboutPlayerSection {
+        padding: 30px 0;
+    }
+    .aboutPlayerSvgWrapper {
+        min-height: 250px;
+    }
+}
+
+.footageContainer {
+    background-color: #A40F37;
+    padding: 70px 0px 94px 0px;
+}
+
+.footageHeading {
+    color: #FFF;
+    font-family: "Sansation";
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    border-bottom: 2px solid #fff;
+    display: inline-block;
+}
+
+.pdfImage {
+    height: 384px;
+    width: 295px;
+}
+
+.pdf-section {
+    overflow: hidden;
+}
+
+.pdf-preview-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+.svg-background {
+    position: absolute;
+    top: -10;
+    right: 0;
+    height: 503px; /* Set your desired fixed height */
+    width: auto; /* Maintain aspect ratio if needed */
+    z-index: -1;
+    overflow: hidden;
+}
+
+.pdf-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.pdfImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tooltip-wrapper {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+}
+
+.infoIcon {
+    width: 30px;
+    height: 31px;
+    cursor: pointer;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: -35px;
+    right: -5px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+    font-size: 14px;
+}
+
+.tooltip-wrapper:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tooltip {
+        font-size: 12px;
+        white-space: normal;
+        width: 150px;
+        right: -5px;
+        top: -40px;
+    }
+}
+
+
+.downloadPdfBtnRed {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    height: 39px;
+    color: #FFF;
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+.innerContainer {
+    padding: 27px 0px;
+    border-top: 1px solid #000;
+}
+
+.navbar-transition {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bg-dark {
+    background-color: #000 !important;
+}
+
+.border-dark {
+    border-color: #000;
+}
+
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.paginationIndex {
+    padding: 10px 13.5px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid #ABABAB;
+    color: #ABABAB;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.paginationIndex.activeIndex {
+    border-color: #A40F37;
+    color: #A40F37;
+}
+
+.paginationNext {
+    padding: 10px;
+    color: #FFF;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.generatingText {
+    height: 400px;
+    width: 244px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+
+@media(max-width: 576px) {
+    .buttonHolder {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .dashBoardBackground::before {
+        min-height: 121vh;
+    }
+
+}
+
+@media(max-width: 1350px) {
+    .overlayWrap {
+        margin-left: 250px;
+    }
+
+}
+
+@media(max-width: 1200px) {
+    .overlayWrap {
+        margin-left: 170px;
+    }
+    .pdfContent {
+        padding-left: 20px;
+    }
+
+
+}
+
+
+@media (min-width: 446px) {
+    .heroPlayerName::after {
+        content: attr(data-text);
+        color: rgba(255, 255, 255, 0.20);
+        font-size: 48px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: absolute;
+        top: 5px;
+        left: 0px;
+        opacity: 0.7;
+    }
+}
+
+@media(min-width: 576px) {
+    .getStarted {
+        width: 305px;
+    }
+
+    .authSubHeading {
+        width: 281px;
+    }
+
+    .authInputGroup input {
+        width: 445px;
+    }
+
+    .authContainer {
+        padding-left: 150px;
+        margin-left: -50px;
+    }
+
+    .forgotPasswordContainer {
+        width: 445px;
+    }
+
+    .authSubmitButton {
+        width: 445px;
+    }
+
+    .redirectButton {
+        width: 445px;
+    }
+
+    .authSubHeadingSignup {
+        width: 454px;
+    }
+
+    .modal-dialog {
+        width: 633px !important;
+        max-width: 663px;
+    }
+
+    .customWidth {
+        width: 762px !important;
+        max-width: 762px;
+    }
+
+    .playerRow {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .playerInfo {
+        flex-direction: row;
+    }
+
+    .index {
+        padding-right: 16px;
+        border-right: 1px solid #E4E4E4;
+    }
+
+    .exportButton {
+        font-size: 0.8rem;
+    }
+
+    .playerButton {
+        font-size: 0.8rem;
+    }
+
+    .playerDetails {
+        align-items: flex-start;
+    }
+
+    .subHeading {
+        font-size: 2rem;
+    }
+
+    .mainHeading {
+        font-size: 2.4rem;
+    }
+
+    .subHeadingLight {
+        font-size: 0.9rem;
+    }
+
+    .backgroundContainer::before {
+        border-radius: 20px;
+    }
+
+    .backgroundContainer {
+        height: 95.5vh;
+    }
+
+    .heroPlayerImage {
+        width: 468px;
+        /*margin-left: 150px;*/
+        /*padding-bottom: 40px;*/
+        /*margin-top: 35px;*/
+    }
+
+    .statsWrapper {
+        width: auto;
+    }
+
+    .heroImageWrapper {
+        width: 460px;
+    }
+
+    .aboutPlayerSection {
+        padding: 30px 0;
+    }
+    .aboutPlayerSvgWrapper {
+        min-height: 250px;
+    }
+
+}
+
+@media(min-width: 1000px) {
+    .subHeadingLight {
+        width: 987px;
+    }
+}
+
+/*@media(min-width: 1400px) {}*/
